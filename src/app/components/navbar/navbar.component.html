@@ -1,0 +1,33 @@
+
+  <mat-toolbar >
+   <a routerLink="/"
+   mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>laptop_chromebook</mat-icon>
+  </a>
+  <span><h1>EXAMSATHI</h1></span>
+  <span class="example-spacer"></span>
+  <a
+  *ngIf="!isLoggedIn"
+  routerLink="/login"
+   mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>login</mat-icon>
+  </a>
+  <a
+  *ngIf="!isLoggedIn"
+  routerLink="/signup"
+   mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <mat-icon>app_registration</mat-icon>
+ </a>
+ <a
+  *ngIf="isLoggedIn && user"
+   >
+   <a ><b class="principal_name">{{user.username}}</b></a>
+ </a>
+ <a
+  *ngIf="isLoggedIn"
+  (click)="logout()"
+   mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <mat-icon>logout</mat-icon>
+ </a>
+</mat-toolbar>
+

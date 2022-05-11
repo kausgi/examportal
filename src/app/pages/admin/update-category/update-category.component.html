@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-list>
+    <div mat-subheader ><b> UPDATE CATEGORY</b>
+      </div>
+    </mat-list>
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <form (ngSubmit)="formSubmit()">
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Code</mat-label>
+                <input required autofocus type="text" name="code" matInput placeholder="Enter code" [(ngModel)]="category.code"/>
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Title</mat-label>
+                <input required autofocus type="text" name="title" matInput placeholder="Enter title" [(ngModel)]="category.title"/>
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea required autofocus type="text" name="description" matInput placeholder="Enter description" rows="13" [(ngModel)]="category.description"></textarea>
+              </mat-form-field>
+              <div class="container" style="margin-top: 15px;text-align:center">
+                  <button mat-raised-button color="primary">UPDATE</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+</mat-card>

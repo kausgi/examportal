@@ -1,0 +1,18 @@
+p{
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+strong{
+  letter-spacing: 2px;
+  font-size: 23px;
+  font-family: consolas;
+
+}
+
+.update,.delete{
+  background: white;
+  border: 1px solid white;
+}

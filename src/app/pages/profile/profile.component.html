@@ -1,0 +1,59 @@
+<mat-card *ngIf="user">
+  <mat-list>
+  <div mat-subheader><b> MY PROFILE</b></div>
+  <mat-card-content style="padding: 10px;">
+    <div class="botstrap-wrapper" style="text-align: center;">
+      <div class="container">
+        <img src="../../../assets/login.png" height="100" width="100">
+        <p style="text-align:center;padding-top:30px;letter-spacing: 2px;font-size: 20px;font-family:consolas;font-weight: bold;">{{user.first_name}} {{user.last_name}}</p>
+      </div>
+      <div class="container">
+        <mat-card-actions style="text-align: center;">
+    <button><mat-icon>
+drive_file_rename_outline</mat-icon></button>
+    <button ><mat-icon>
+share</mat-icon></button>
+  </mat-card-actions>
+        <div class="row">
+
+          <div class="col-md-5 offset-md-4">
+
+            <table class="table">
+              <tr>
+              <th><p>Username:</p></th>
+              <td><p>{{user.username}}</p></td>
+              </tr>
+              <tr>
+              <th><p>Name:</p></th>
+              <td><p>{{user.first_name}}</p></td>
+              </tr>
+              <tr>
+              <th><p>Surname:</p></th>
+              <td><p>{{user.last_name}}</p></td>
+              </tr>
+              <tr>
+              <th><p>Email:</p></th>
+              <td><p>{{user.email}}</p></td>
+              </tr>
+              <tr>
+              <th><p>Phone:</p></th>
+              <td><p>{{user.phone}}</p></td>
+              </tr>
+              <tr>
+              <th><p>About:</p></th>
+              <td><p>{{user.about}}</p></td>
+              </tr>
+              <tr>
+              <th><p>Ac. Active:</p></th>
+              <td><p>{{user.enabled}}</p></td>
+              </tr>
+
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  </mat-list>
+</mat-card>

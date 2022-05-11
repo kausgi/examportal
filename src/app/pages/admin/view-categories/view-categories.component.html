@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-list>
+    <div mat-subheader><b> ALL CATEGORIES</b></div>
+    <mat-list-item *ngFor="let c of categories">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <div mat-line style="font-family: consolas;font-weight: bold;">
+      {{c.title}} [{{c.code}}]
+
+      </div>
+            <button [routerLink]="'/admin/category/' +c.id"><mat-icon>edit_note</mat-icon></button>
+      <button (click)="deleteCategory(c.id)"><mat-icon>remove_circle_outline</mat-icon></button>
+      <div mat-line style="font-family: consolas;">{{c.description}}
+      </div>
+      <mat-divider></mat-divider>
+
+
+    </mat-list-item>
+  </mat-list>
+  <div class="container text-center" style="margin-top: 20px;">
+  <button routerLink="/admin/add-category" mat-raised-button color="primary">Add New Category</button>
+</div>
+</mat-card>
+
+

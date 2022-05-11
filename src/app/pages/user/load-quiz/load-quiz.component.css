@@ -1,0 +1,41 @@
+.title
+{
+  font-family: consolas;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.subtitle
+{
+
+  font-size: 12px;
+
+}
+
+.desc{
+  font-family: consolas;
+  font-size: 14px;
+}
+
+.truncate{
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+.view{
+  margin-left: 10px;
+  font-size: 12px;
+    border: 1px solid white;
+  background: white;
+  cursor: pointer;
+}
+
+.start{
+  font-size: 12px;
+  border: 1px solid white;
+  background: white;
+  cursor: pointer;
+}

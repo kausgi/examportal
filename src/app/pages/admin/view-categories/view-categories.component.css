@@ -1,0 +1,19 @@
+b{
+  font-family: consolas;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+a{
+  border: 1px solid white;
+  background: white;
+  color: black;
+}
+
+button{
+  border: 1px solid white;
+  background: white;
+  color: black;
+}

@@ -1,0 +1,33 @@
+
+  <mat-list>
+    <div mat-subheader><b> ALL QUIZZES</b></div>
+    <mat-card style="margin-top: 10px;" *ngFor="let q of quizzes">
+      <mat-card-header>
+        <mat-card-title style="font-family: consolas;font-size: 18px;font-weight: bold;">
+
+          {{q.title}} [{{q.code}}]
+          <button class="crud" [routerLink]="'/admin/quiz/' + q.id"><mat-icon>edit_note</mat-icon></button>
+          <button class="crud" style="margin-left: 10px;" (click)="deleteQuiz(q.id)"><mat-icon>remove_circle_outline</mat-icon></button>
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{q.category.title}}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="margin-left: 15px;font-family: consolas;">
+        {{q.description}}
+      </mat-card-content>
+
+        <button
+        [routerLink]="'/admin/view-questions/' + q.id + '/' + q.title"
+        mat-flat-button color="primary" style="margin-left: 15px;">Questions</button>
+        <button mat-stroked-button  style="margin-left: 10px;">Max marks: {{q.maxMarks}}</button>
+        <button mat-stroked-button  style="margin-left: 10px;">{{q.numberOfQuestions}} Questions</button>
+        <button mat-stroked-button  style="margin-left: 10px;">Attempts</button>
+    </mat-card>
+
+  </mat-list>
+
+  <div class="container" style="margin-top: 20px;text-align: center;">
+    <button routerLink="/admin/add-quiz" mat-raised-button color="primary">Add Quiz</button>
+  </div>
+

@@ -1,0 +1,38 @@
+.table
+{
+  width:100%;
+  margin-top: 20px;
+
+}
+
+th p{
+  font-family: consolas;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+td p{
+  font-family: consolas;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+}
+
+button{
+  background: transparent;
+  font-size: 14px;
+  border: 2px solid white;
+}
+
+b{
+  font-family: consolas;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+

@@ -1,0 +1,13 @@
+.quiz-header
+{
+  font-size: 20px;
+  font-family: consolas;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.content{
+    font-size: 14px;
+  font-family: consolas;
+  margin-top: 20px;
+}

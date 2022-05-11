@@ -1,0 +1,81 @@
+<div class="bootstrap-wrapper" *ngIf="!submitted">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        inst
+    </div>
+    <div class="col-md-6">
+      <ng-container *ngIf="questions">
+        <p class="quiz-header"><b>{{questions[0].quiz.title}}</b>(LIVE)</p>
+      </ng-container>
+      <mat-card *ngFor="let q of questions; let i = index;" style="margin-top: 20px;">
+        <mat-card-content>
+          <p class="content" >{{q.content}}</p>
+        </mat-card-content>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-md-6">
+            <input type="radio" [value]="q.option1" [name]="i+''" [(ngModel)]="q.givenAnswer" ><b style="margin-left: 5px;">{{q.option1}}</b>
+          </div>
+          <div class="col-md-6">
+            <input type="radio" [value]="q.option2" [name]="i+''" [(ngModel)]="q.givenAnswer" ><b style="margin-left: 5px;">{{q.option2}}</b>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="radio" [value]="q.option3" [name]="i+''" [(ngModel)]="q.givenAnswer" ><b style="margin-left: 5px;">
+
+            {{q.option3}}</b>
+          </div>
+          <div class="col-md-6">
+            <input type="radio"  [value]="q.option4" [(ngModel)]="q.givenAnswer" [name]="i+''"  ><b style="margin-left: 5px;">{{q.option4}}</b>
+          </div>
+        </div>
+      </mat-card>
+      <div class="container" style="margin-top: 20px; text-align: center;margin-bottom:20px;">
+        <button (click)="submitQuiz()" mat-raised-button color="primary">SUBMIT</button>
+      </div>
+    </div>
+    <div class="col-md-3" style="margin-top: 20px;">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Progress  <p style="padding-top: 5px;font-family:consolas;font-size:16px;font-weight:bold;color:red;">{{getFormattedTime()}}</p>
+          </mat-card-title>
+          <mat-card-subtitle>
+            Quiz will be automatically ended after the time ends
+          </mat-card-subtitle>
+          <mat-card-content>
+            <mat-spinner
+            mode="determinate"
+            [value]="(timer/(this.questions.length * 1 * 60))*100"
+            ></mat-spinner>
+          </mat-card-content>
+
+        </mat-card-header>
+      </mat-card>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="bootstrap-wrapper" style="text-align: center;" *ngIf="submitted">
+  <div class="container-fluid" >
+    <div class="row" style="margin-top: 60px;text-align:center">
+      <div class="col-md-6 offset-md-3">
+        <mat-card>
+          <mat-card-header style="text-align: center;">
+<p style="margin-top: 20px;font-family: consolas;font-size: 16px;font-weight: bold;color: gray;">Your result:</p>
+          </mat-card-header>
+          <mat-card-content>
+            <p style="margin-top: 20px;font-family: consolas;font-size: 16px;font-weight: bold;">Correct Answers: {{correctAnswers}}</p>
+            <p style="margin-top: 20px;font-family: consolas;font-size: 16px;font-weight: bold;">Attempted: {{attempted}}</p>
+            <p style="margin-top: 20px;font-family: consolas;font-size: 16px;font-weight: bold;">Marks Got: {{marksGot}}</p>
+          </mat-card-content>
+        </mat-card>
+        <div class="container" style="margin-top: 20px;text-align: center;">
+          <button [routerLink]="'/user/'+0" mat-raised-button color="primary">HOME</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11">
+        <mat-card style="margin-top: 20px;">
+          <mat-card-header>
+              <p class="header">Read the instruction carefully</p>
+
+          </mat-card-header>
+          <mat-card-subtitle>
+            <p class="subtitle">Your quiz is just one step away</p>
+          </mat-card-subtitle>
+          <mat-card-content>
+            <p class="title">{{quiz.title}}</p>
+            <p class="content">{{quiz.description}}</p>
+            <mat-divider>
+
+            </mat-divider>
+            <p class="important">Rules You have to adhere</p>
+            <p class="not-so-important"> To be successful with the weekly quizzes, it’s important to thoroughly read chapter 5 in the textbook.  It will also be extremely useful to study the key terms at the end of the chapter and review the Test Your Knowledge activity at the end of the chapter. Keep the following in mind</p>
+            <ul >
+              <li class="inst">1. You will have three attempts for this quiz with your highest score being recorded in the grade book</li>
+              <li class="inst">2. You will need to complete each of your attempts in one sitting, as you are allotted 30 minutes to complete each attempt.</li>
+              <li class="inst">3. You may review your answer-choices and compare them to the correct answers after your final attempt.</li>
+              <li class="inst" style="font-size: 10px">Only registered, enrolled users can take graded quizzes</li>
+            </ul>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="container" style="text-align: center;margin-bottom:20px;">
+              <button (click)="startQuiz()" mat-raised-button color="primary">START</button>
+            </div>
+
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
